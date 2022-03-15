@@ -24,7 +24,7 @@ dependencies = [
 ]
 
 [[package]]
-name = "async-compression"
+name = "async-compression-legacy-mononoke"
 version = "0.3.8"
 dependencies = [
  "brotli",
@@ -52,8 +52,8 @@ dependencies = [
  "tokio-util 0.5.1",
  "tokio-util 0.6.6",
  "xz2",
- "zstd",
- "zstd-safe",
+ "zstd-legacy-mononoke",
+ "zstd-legacy-mononoke-safe",
 ]
 
 [[package]]
@@ -1085,29 +1085,26 @@ dependencies = [
 ]
 
 [[package]]
-name = "zstd"
-version = "0.7.0+zstd.1.4.9"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "9428752481d8372e15b1bf779ea518a179ad6c771cca2d2c60e4fbff3cc2cd52"
+name = "zstd-legacy-mononoke"
+version = "0.8.0+zstd.1.4.9"
+source = "git+https://github.com/mitrandir77/zstd-rs?rev=c29b8daa3ba3eeab9d2017234acb101ffc2459b3#c29b8daa3ba3eeab9d2017234acb101ffc2459b3"
 dependencies = [
- "zstd-safe",
+ "zstd-legacy-mononoke-safe",
 ]
 
 [[package]]
-name = "zstd-safe"
-version = "3.1.0+zstd.1.4.9"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "5aa1926623ad7fe406e090555387daf73db555b948134b4d73eac5eb08fb666d"
+name = "zstd-legacy-mononoke-safe"
+version = "4.0.0+zstd.1.4.9"
+source = "git+https://github.com/mitrandir77/zstd-rs?rev=c29b8daa3ba3eeab9d2017234acb101ffc2459b3#c29b8daa3ba3eeab9d2017234acb101ffc2459b3"
 dependencies = [
  "libc",
- "zstd-sys",
+ "zstd-legacy-mononoke-sys",
 ]
 
 [[package]]
-name = "zstd-sys"
+name = "zstd-legacy-mononoke-sys"
 version = "1.5.0+zstd.1.4.9"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "4e6c094340240369025fc6b731b054ee2a834328fa584310ac96aa4baebdc465"
+source = "git+https://github.com/mitrandir77/zstd-rs?rev=c29b8daa3ba3eeab9d2017234acb101ffc2459b3#c29b8daa3ba3eeab9d2017234acb101ffc2459b3"
 dependencies = [
  "cc",
  "libc",

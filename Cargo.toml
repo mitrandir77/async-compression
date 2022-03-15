@@ -1,5 +1,5 @@
 [package]
-name = "async-compression"
+name = "async-compression-legacy-mononoke"
 version = "0.3.8"
 authors = ["Wim Looman <wim@nemo157.com>", "Allen Bui <fairingrey@gmail.com>"]
 edition = "2018"
@@ -44,8 +44,8 @@ flate2 = { version = "1.0.11", optional = true }
 futures-core = { version = "0.3.0", default-features = false }
 futures-io = { version = "0.3.0", default-features = false, features = ["std"], optional = true }
 pin-project-lite = "0.2.0"
-libzstd = { package = "zstd", version = "0.7.0", optional = true, default-features = false }
-zstd-safe = { version = "3.0.0", optional = true, default-features = false }
+libzstd = { package = "zstd-legacy-mononoke", git = "https://github.com/mitrandir77/zstd-rs", rev = "c29b8daa3ba3eeab9d2017234acb101ffc2459b3", optional = true, default-features = true}
+zstd-safe = { package = "zstd-legacy-mononoke-safe", git = "https://github.com/mitrandir77/zstd-rs", rev = "c29b8daa3ba3eeab9d2017234acb101ffc2459b3", optional = true, default-features = false}
 memchr = "2.2.1"
 tokio-02 = { package = "tokio", version = "0.2.21", optional = true, default-features = false }
 tokio-03 = { package = "tokio", version = "0.3.0", optional = true, default-features = false }
